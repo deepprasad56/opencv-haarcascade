@@ -15,7 +15,7 @@ Softwares required
 
 We require the following softwares for the creation of your own classifier
 
-1) OpenCV: the version I used is 3.4
+1) OpenCV: The version I used is 3.4
 2) Python: The version I used is 3.6(Spyder)
 
 Moreover we require a webcam (of course :p)
