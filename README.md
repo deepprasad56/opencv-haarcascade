@@ -26,7 +26,7 @@ The first step is to take a clear picture of the object to be classified.
 
 The size should not be very large as it takes larger time for the computer to process. I took 50 by 50 size for watch and 100 by 50 for calculator.
 Then we download the negative and positive images. We can find them online. But we use the python code to download images from 'http://image-net.org'. There should be around 2000 neg images.
-Then we convert the images to greyscale and to a normal size. This is also implemented in the code. The code also removes any faulty image
+Then we convert the images to grayscale and to a normal size. This is also implemented in the code. The code also removes any faulty image.
 By now our directory should contain the object image e.g watch5050.jpg neg images folder bg.txt file empty data folder
 If data folder is not created, do it manually.
 
