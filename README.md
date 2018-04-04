@@ -26,7 +26,7 @@ The first step is to take a clear picture of the object to be classified.
 
 The size should not be very large as it takes larger time for the computer to process. I took 50 by 50 size for watch and 100 by 50 for calculator.
 Then we download the negative and positive images. We can find them online. But we use the python code to download images from 'http://image-net.org'. There should be around 2000 neg images.
-Then we convert the images to greyscale and to a normal size. This is alo implemented in the code. The code also removes any faulty image
+Then we convert the images to greyscale and to a normal size. This is also implemented in the code. The code also removes any faulty image
 By now our directory should contain the object image e.g watch5050.jpg neg images folder bg.txt file empty data folder
 If data folder is not created, do it manually.
 
@@ -35,20 +35,18 @@ The python code is provided in the the .py file in grab_neg_images dir
  
  opencv_createsamples -img watch5050.jpg -bg bg.txt -info info/info.lst -pngoutput info -maxxangle 0.5 -maxyangle 0.5 -maxzangle 0.5 -num 1950 
  
- This command is for creating the positive samples of the object 1950 to be exact. Now your folder should contain a neg images folder, an info folder, a bg.txt file and an empty data folder.
+ This command is for creating the positive samples of the object 1950 exactly. Now your folder should contain a neg images folder, an info folder, a bg.txt file and an empty data folder.
  
  Now we need to create the positive vector file that provides the path to the positive images decsription file
 
 Use the following command:
 opencv_createsamples -info info/info.lst -num 1950 -w 40 -h 40 -vec positives.vec
 
-By now the contents of the directory must be the follow:
+By now the contents of the directory must be as follows:
 
 --neg
 
 ----negimages.jpg
-
---opencv
 
 --info
 
@@ -69,7 +67,7 @@ Use the following command
 
 opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 1800 -numNeg 900 -numStages 10 -w 40 -h 40
 
-One problem I faced durinf training is that it always ended the training saying required false alarm rate achieved.This happens because the classifier has reached its optimal and cannot be trained further. To avoid this increase the features of the image by increasing the pixels( i.e. the width and height) but increasing the pixel will lead to more training time and memory consumption. So decide wisely the pixels.
+One problem I faced during training is that it always ended the training saying required false alarm rate achieved.This happens because the classifier has reached its optimal and cannot be trained further. To avoid this increase the features of the image by increasing the pixels( i.e. the width and height) but increasing the pixel will lead to more training time and memory consumption. So decide wisely the pixels.
 
 Now haarcascade is created It takes about few hours to complete. Open the data folder there you will find cascade.xml. This is the classifier that has been created and will be used to classify. You can rename it whatever you want.
 
