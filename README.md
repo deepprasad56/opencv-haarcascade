@@ -67,9 +67,9 @@ Use the following command
 
 opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 1800 -numNeg 900 -numStages 10 -w 40 -h 40
 
-One problem I faced during training is that it always ended the training saying required false alarm rate achieved.This happens because the classifier has reached its optimal and cannot be trained further. To avoid this increase the features of the image by increasing the pixels( i.e. the width and height) but increasing the pixel will lead to more training time and memory consumption. So decide wisely the pixels.
+One problem I faced during training is that it always ended the training saying required false alarm rate achieved.This happens because the classifier has reached its optimal and cannot be trained further. To avoid this increase the features of the image by increasing the pixels( i.e. the width and height) but increasing the pixel will lead to more training time and memory consumption. So decide the pixels wisely.
 
-Now haarcascade is created It takes about few hours to complete. Open the data folder there you will find cascade.xml. This is the classifier that has been created and will be used to classify. You can rename it whatever you want.
+Now, haarcascade is created. It takes about few hours to complete. Open the data folder there you will find cascade.xml. This is the classifier that has been created and will be used to classify. You can rename it whatever you want.
 
 
 Testing the Classifier:
