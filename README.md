@@ -79,7 +79,7 @@ After creating the classifier, lets check whether the classifier is working or n
 I have created a few classifier like of calculator and watch. In the haarcascade directory all the neccessary xml files and python files are there.
  
  
- /// I would like to thanks Sentdex for this project. A lot of help has been taken from him. He has a youtube channel named sentdex. He trained the cascades on linux and I used Windows. Hence I faced a lot of problems while training. I have tried to simplify the steps as much as possible here. Thanks.///
+ /// I would like to thanks Harrison Kinsley for this project. A lot of help has been taken from him. He has a youtube channel named sentdex. He trained the cascades on linux and I used Windows. Hence I faced a lot of problems while training. I have tried to simplify the steps as much as possible here. Thanks.///
  
  
  
